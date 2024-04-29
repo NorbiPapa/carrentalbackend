@@ -7,7 +7,7 @@ async function main() {
     for (let index = 0; index < 15; index++) {
         await prisma.rentals.create({
             data: {
-                startDate: faker.date.anytime(),
+                startDate: faker.date.past(),
                 endDate: faker.date.recent(),
                 car_id: faker.number.int({min:1, max:11})
             }
